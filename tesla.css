@@ -382,8 +382,11 @@ body {
 
 @media screen and (max-width: 768px) {
 	h1 {
-		font-size: 30px;
+		font-size: 24px;
 	}
+  p {
+    font-size: 12px;
+  }
 } 
 
 
@@ -480,7 +483,6 @@ body {
 .order-service-btn {
 	position: relative;
 	overflow: hidden;
-  margin: 0 35px;
 }
 
 .order-service-btn:before {
@@ -518,10 +520,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.button--left {
-  margin-right: 50px;
 }
 
 .button {
