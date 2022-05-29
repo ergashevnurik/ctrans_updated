@@ -38,10 +38,49 @@
 				<a href="">Вход</a>
 			</li>
 			<li>
-				<a href="">Меню</a>
+				<a href="" class="btn-btn-primary order-service-btn">Калькулятор</a>
 			</li>
 		</ul>
 	</nav>
+
+
+	<div class="wrapper">
+		<div class="burger-menu">
+		  <a href="">
+			<img src="http://ctrans.herokuapp.com/static/img/logo.svg">
+		  </a>
+		  <div class="burger-click-region" onclick="haminate()">
+		    <span class="burger-menu-piece top"></span>
+		    <span class="burger-menu-piece middle"></span>
+		    <span class="burger-menu-piece btm"></span>
+		  </div>
+		</div>
+
+		<div class="sidebar">
+		  <div class="sidemenu">
+		  	<ul>
+		  		<li class="sidetext">
+		  			<a href="/#about">О нас</a>
+		  		</li>
+				<li class="sidetext">
+					<a href="/#services">Услуги</a>
+				</li>
+				<li class="sidetext">
+					<a href="/#services">Услуги</a>
+				</li>
+				<li class="sidetext">
+					<a href="/#comments">Отзывы</a>
+				</li>
+				<li class="sidetext">
+					<a href="/#news">Новости</a>
+				</li>
+				<li class="sidetext">
+					<a href="/#">Контакты</a>
+				</li>
+		  	</ul>
+		  </div>
+		</div>
+	</div>
 
 	<ul class="panels">
       <li class="panel"></li>
@@ -63,7 +102,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -80,7 +119,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -96,7 +135,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -112,7 +151,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -128,7 +167,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -144,7 +183,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -160,7 +199,7 @@
 						<img src="http://ctrans.herokuapp.com/static/img/calibriLogo.svg">
 					</div>
 					<div class="flex mt-auto">
-						<a href="">ЗАКАЗАТЬ УСЛУГУ</a>
+						<a href="" class="btn-btn-primary order-service-btn">ЗАКАЗАТЬ УСЛУГУ</a>
 						<a href="" class="white">ПОДРОБНО</a>
 					</div>
 				</div>
@@ -228,7 +267,7 @@
 		            'textColor': '#000',
 		            'bulletsColor': '#000',
 		            'position': 'right',
-		            'tooltips': ['About', 'Services', 'Price List', 'Calculator', 'News', 'Events']
+		            // 'tooltips': ['About', 'Services', 'Price List', 'Calculator', 'News', 'Events']
 		        },
 		        sectionsColor: ['whitesmoke', 'whitesmoke', 'whitesmoke', 'whitesmoke', 'whitesmoke', 'whitesmoke', 'whitesmoke'],
 		       	normalScrollElements: null,
@@ -285,6 +324,36 @@
 			});
 
 		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+		<script type="text/javascript">
+			var burgerTop= document.getElementsByClassName("top");
+			var burgerBot= document.getElementsByClassName("btm");
+			var burgerMid= document.getElementsByClassName("middle");
+			var burgerSidebar= document.getElementsByClassName("sidebar");
+			var sideText= document.getElementsByClassName("sidetext");
+			var burgerWhole= document.querySelectorAll(".top, .btm, .middle");
+
+			var timelineMax = new TimelineMax({paused:true, reversed:true});
+			  timelineMax.timeScale(1);
+			  timelineMax
+			  .to(burgerTop, 0.7, { y: 11, yoyo: true, ease: Power1.easeInOut})
+			  .to(burgerBot, 0.7, { y: -11, yoyo: true, ease: Power1.easeInOut}, '-=0.7')
+			  .to(burgerTop, 1, {rotation:585})
+			  .to(burgerMid, 1, {rotation:585}, '-=1')
+			  .to(burgerBot, 1, {rotation:675}, '-=1')
+			  .to(burgerWhole, 0.1, {css:{borderColor:"#000"}, ease: Power1.easeOut}, '-=1')
+			  .to(burgerSidebar, 1, {x:550, ease: Power2.easeOut}, '-=1')
+			  .staggerFrom(sideText, 0.5, {opacity: 0, y: 25, ease: Power1.easeOut}, 0.1, "-=0.7")
+			  .to(sideText, 0.2, {css:{color:"#000"}});
+			    
+			function haminate() {
+			  timelineMax.reversed() ? timelineMax.play() : timelineMax.reverse();	
+			  
+			}
+		</script>
+		
 
 </body>
 </html>
