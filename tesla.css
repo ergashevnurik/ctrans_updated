@@ -506,3 +506,84 @@ body {
     transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, 180%, 0px);
 }
 /* Butotn Hover effect */
+
+
+
+/* Modal */
+.buttons-ctn {
+  will-change: transform;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button--left {
+  margin-right: 50px;
+}
+
+.button {
+  will-change: transform;
+  display: inline-block;
+  text-align: center;
+  line-height: normal;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.button--active {
+  border-radius: 0;
+  cursor: default;
+  padding: 65px 130px;
+}
+.button--active span {
+  opacity: 0;
+}
+.button-modal {
+  position: relative;
+}
+.button__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  color: white;
+}
+.button__content--left {
+  color: white;
+}
+.button__content--left a {
+  color: #141414;
+  background: white;
+}
+.button__content--right {
+  color: #141414;
+}
+.button__content--right a {
+  color: white;
+  background: #141414;
+}
+.button__content--active {
+  opacity: 1;
+  visibility: visible;
+}
+.button__content a {
+  display: inline-block;
+}
+.button__content h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+@media (max-width: 650px) {
+  .button__content {
+    width: 295px;
+  }
+}
+/*Modal*/
