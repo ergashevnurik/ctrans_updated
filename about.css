@@ -1,0 +1,259 @@
+
+/* About Section Module Goes here */
+    :root { font-size: 16px }
+@media (max-width: 500px) { :root { font-size: 14px } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #03366f;
+  color: white;
+}
+
+::selection {
+  background: #03366f;
+  color: white;
+}
+
+h1 { font-size: 5rem }
+h2 { font-size: 2rem }
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 18px!important;
+	}
+	h2 {
+		font-size: 16px!important;
+	}
+	.wrapper {
+		font-size: 16px!important;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	nav ul li:first-child, nav ul li:last-child {
+		display: block;
+	}
+
+	nav ul li {
+		display: none;
+	}	
+
+	.mt-auto {
+		/*margin-top: 250px;*/
+	}
+
+	.hot-link ul li:first-child {
+		display: block
+	}
+
+	.hot-link ul li {
+		display: none;
+	}
+
+	.mt-auto a {
+		padding: 13px 35px;
+    	font-size: 12px;
+	}
+}
+
+.wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.wrapper li {
+  flex-shrink: 0;
+  width: clamp(500px, 60vw, 800px);
+  padding-right: 1rem;
+}
+
+.header {height: 100vh}
+
+/*:-webkit-any-link { color: #4e9815; }
+
+:-moz-any-link { color: #4e9815; }
+
+:any-link { color: #4e9815; }*/
+
+.df {display: flex}
+.aic {align-items: center}
+.jcc {justify-content: center}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #03366f;
+  color: white;
+  z-index: 999;
+}
+
+.demo-wrapper {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/*.demo-gallery:not(.last) {
+  padding-bottom: 1rem;
+}
+*/
+.demo-text .text {
+  font-size: /*clamp(8rem, 15vw, 16rem)*/ 35px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+/* ABout section module ends here */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 12px;
+	right: 0;
+	z-index: 99;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	width: 1174px;
+	margin: auto;
+}
+
+li {
+	padding: 12px;
+	position: relative;
+  overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+nav li:first-child:before {
+	height: 0;
+}
+
+nav li:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 0;
+	transition: all .3s ease;
+	background-color: #03366f;
+}
+
+nav li:hover:before {
+	width: 100%;
+}
+
+nav li a img {
+	width: 150px;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.account {
+	margin-left: auto;
+}
+
+nav ul li {
+	width: unset;
+}
+
+body {
+	background-color: #f0f0f0;
+}
+
+/* Butotn Hover effect */
+.order-service-btn {
+	position: relative;
+	overflow: hidden;
+}
+
+.order-service-btn:before {
+	background-color: #fff;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, -180%, 0px);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, -180%, 0px);
+    -webkit-transition: -webkit-transform 0.6s ease 0s;
+    transition: -webkit-transform 0.6s ease 0s;
+    transition: transform 0.6s ease 0s;
+    transition: transform 0.6s ease 0s, -webkit-transform 0.6s ease 0s;
+    width: 100%;
+    z-index: 4;
+}
+
+.order-service-btn:hover:before {
+	-webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, 180%, 0px);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0px, 180%, 0px);
+}
+
+.btn-btn-primary {
+	background-color: #03366f;
+	padding: 13px 55px;
+	margin: 8px;
+	border-radius: 50px;
+	color: white;
+}
+
+nav li:last-child:before {
+  height: 0;
+}
+
+nav li:last-child a {
+  padding: 13px 25px!important;
+  margin: 0 15px!important;
+}
+a, body {
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+}
+/* Butotn Hover effect */
+
+
+.parent ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#footer {
+	position: relative;
+}
+
+#footer .parent.hot-link {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}

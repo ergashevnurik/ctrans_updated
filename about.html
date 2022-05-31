@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="about.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class="logo">
+				<a href="">
+					<img src="http://ctrans.herokuapp.com/static/img/logo.svg">
+				</a>
+			</li>
+			<li>
+				<a href="about.html">О нас</a>
+			</li>
+			<li>
+				<a href="/#services">Услуги</a>
+			</li>
+			<li>
+				<a href="/#comments">Отзывы</a>
+			</li>
+			<li>
+				<a href="/#news">Новости</a>
+			</li>
+			<li>
+				<a href="/#">Контакты</a>
+			</li>
+			<li class="account">
+				<a href="">Вход</a>
+			</li>
+			<li>
+				<a href="" class="btn-btn-primary order-service-btn">Калькулятор</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class='loader df aic jcc'>
+	  <div>
+	    <h1>Loading</h1>
+	    <h2 class='loader--text'>0%</h2>
+	  </div>
+	</div>
+	<div class='demo-wrapper'>
+	  <header class='header df aic jcc'>
+	    <div>
+	      <h1>Better 1 image <br> than 1000 words</h1>
+	      <h2>ABOUT CTRANS</h2>
+	    </div>
+	  </header>
+	  <section class='demo-text'>
+	    <div class='wrapper text'>
+	      SHORT DETAILS ABOUT CTRANS LOGISTIC COMPANY
+	    </div>
+	  </section>
+	  <section class='demo-gallery'>
+	    <ul class='wrapper'>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=30' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=65' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=185' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=110' width='1240'>
+	      </li>
+	    </ul>
+	  </section>
+	  <section class='demo-gallery'>
+	    <ul class='wrapper'>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=195' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=50' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=82' width='1240'>
+	      </li>
+	    </ul>
+	  </section>
+	  <section class='demo-gallery'>
+	    <ul class='wrapper'>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=196' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=59' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=173' width='1240'>
+	      </li>
+	    </ul>
+	  </section>
+	  <section class='demo-gallery'>
+	    <ul class='wrapper'>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=17' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=57' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=62' width='1240'>
+	      </li>
+	      <li>
+	        <img height='874' src='https://source.unsplash.com/random/1240x874?sig=11' width='1240'>
+	      </li>
+	    </ul>
+	  </section>
+	  <section class='demo-text'>
+	    <div class='wrapper text'>
+	      SHORT DETAILS ABOUT CTRANS LOGISTIC COMPANY
+	    </div>
+	  </section>
+	  <footer class='footer df aic jcc'>
+	    <div class="parent hot-link">
+				<ul>
+					<li>
+						<a href="">MENZ &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script></a>
+					</li>
+					<li>
+						<a href="">Privacy & Legal</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+					<li>
+						<a href="">Careers</a>
+						</li>
+						<li>
+							<a href="">News</a>
+						</li>
+						<li>
+							<a href="">Engage</a>
+						</li>
+						<li>
+							<a href="">Locations</a>
+						</li>
+				</ul>
+			</div>
+	  </footer>
+	</div>
+
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+
+<script type="text/javascript">
+	gsap.registerPlugin(ScrollTrigger);
+
+const images = gsap.utils.toArray('img');
+const loader = document.querySelector('.loader--text');
+const updateProgress = (instance) =>
+loader.textContent = `${Math.round(instance.progressedCount * 100 / images.length)}%`;
+
+const showDemo = () => {
+  document.body.style.overflow = 'auto';
+  document.scrollingElement.scrollTo(0, 0);
+  gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+
+  gsap.utils.toArray('section').forEach((section, index) => {
+    const w = section.querySelector('.wrapper');
+    const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+    gsap.fromTo(w, { x }, {
+      x: xEnd,
+      scrollTrigger: {
+        trigger: section,
+        scrub: 0.5 } });
+
+
+  });
+};
+
+imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+</script>
+
+<script type="text/javascript">
+	window.onscroll = function() {
+		if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+			document.querySelector('nav').style.backgroundColor = '#f0f0f0';
+		} else {
+			document.querySelector('nav').style.backgroundColor = 'transparent';
+		}
+	}
+</script>
+
+</body>
+</html>
